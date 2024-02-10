@@ -14,5 +14,5 @@ function executeCommand(command) {
 }
 
 // Test Cases
-executeCommand('ls -la');
+executeCommand('ls-la');
 executeCommand('echo "Hello, Node.js!"');
