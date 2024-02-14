@@ -5,7 +5,6 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 const wss = new WebSocket.Server({ server });
-
 // Function to setup WebSocket
 function setupWebSocket(server) {
   wss.on('connection', function connection(ws) {
@@ -16,10 +15,8 @@ function setupWebSocket(server) {
     });
   });
 }
-
 // Call setupWebSocket
 setupWebSocket(server);
-
 // Serve an HTML page with WebSocket client code
 app.get('/websocket', (req, res) => {
   res.sendFile(__dirname + '/websocket.html');

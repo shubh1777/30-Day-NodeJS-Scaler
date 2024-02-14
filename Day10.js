@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
  
 
-// function staticFileServer(req, res){
+function staticFileServer(req, res){
     const port = 3000; // You can use any port that is free on your system
     const app = express();
 // Serve static files from the "public" directory
@@ -19,6 +19,6 @@ app.listen(port, () => {
 
 });
 
-// app(req, res);
-// }
-// module.exports = staticFileServer;
+app(req, res);
+}
+module.exports = staticFileServer;
